@@ -176,6 +176,33 @@
   .serve-cta{text-align:center;margin-top:44px}
   .serve-cta p{margin-bottom:20px;color:var(--dim)}
 
+  /* --- 料金 --- */
+  .price-wrap{margin-top:40px;display:grid;grid-template-columns:1.4fr 1fr;gap:22px;align-items:start}
+  .price-main{background:var(--bg2);border:3px solid var(--pink);box-shadow:inset 0 0 0 3px var(--bg2),inset 0 0 0 6px var(--pink),var(--shadow);padding:26px 24px}
+  .price-list{list-style:none}
+  .price-list li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:13px 0;border-top:2px dotted #45456e}
+  .price-list li:first-child{border-top:0}
+  .price-name{font-size:.98rem;line-height:1.5}
+  .price-sub{display:block;font-size:.76rem;color:var(--dim);margin-top:2px}
+  .price-val{font-size:1rem;color:var(--yellow);white-space:nowrap}
+  .price-side{display:flex;flex-direction:column;gap:22px}
+  .price-card{background:var(--bg2);border:3px solid var(--cream);box-shadow:var(--shadow);padding:22px}
+  .price-card h3{font-size:1.05rem;color:var(--cyan);margin-bottom:12px}
+  .opt-list,.info-list{list-style:none}
+  .opt-list li{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-top:2px dotted #45456e;font-size:.9rem}
+  .opt-list li:first-child,.info-list li:first-child{border-top:0}
+  .opt-list .v{color:var(--yellow);white-space:nowrap;font-size:.86rem}
+  .info-list li{padding:9px 0;border-top:2px dotted #45456e;font-size:.9rem}
+  .info-list .k{color:var(--cyan);display:block;font-size:.8rem;margin-bottom:3px}
+  .price-note{margin-top:16px;font-size:.82rem;color:var(--dim)}
+  .flow-title{font-size:1.2rem;margin:44px 0 4px}
+  .steps{margin-top:20px;counter-reset:pstep;display:grid;gap:12px}
+  .step-row{display:flex;gap:16px;align-items:flex-start;background:var(--bg2);border:3px solid var(--cream);box-shadow:var(--shadow);padding:15px 18px}
+  .step-row .n{counter-increment:pstep;font-family:'Press Start 2P',monospace;font-size:.86rem;color:var(--pink);flex:0 0 auto;min-width:2.4em;line-height:1.4}
+  .step-row .n::before{content:counter(pstep,decimal-leading-zero)}
+  .step-row .t{font-size:.96rem;line-height:1.5}
+  .step-row .t small{display:block;color:var(--dim);font-size:.8rem;margin-top:2px}
+
   /* --- お問い合わせ --- */
   .contact-inner{max-width:720px;margin:0 auto;text-align:center}
   .contact-inner .sec-lead{margin:0 auto 30px}
@@ -212,7 +239,7 @@
     .nav-links .nav-cta{width:100%;text-align:center;margin-top:12px;border-bottom:2px solid var(--cream)}
     .menu-toggle{display:block}
     section{padding:60px 0}
-    .about-grid,.menu-2,.sub-2{grid-template-columns:1fr}
+    .about-grid,.menu-2,.sub-2,.price-wrap{grid-template-columns:1fr}
     .works-grid{grid-template-columns:1fr}
     .gallery-grid{grid-template-columns:1fr 1fr}
     .flow{grid-template-columns:1fr 1fr}
@@ -239,6 +266,7 @@
       <a href="#works">活動</a>
       <a href="#gallery">ギャラリー</a>
       <a href="#services">お仕事のご依頼</a>
+      <a href="#price">料金</a>
       <a href="#contact" class="nav-cta">CONTACT</a>
     </div>
     <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く" aria-expanded="false">☰</button>
@@ -406,6 +434,60 @@
   </div>
 </section>
 
+<!-- ===== 料金 ===== -->
+<section id="price">
+  <div class="wrap">
+    <span class="eyebrow pink">★ PRICE</span>
+    <h2 class="sec-title reveal">イラスト料金表</h2>
+    <p class="sec-lead reveal">キャラの描き込み量ベースの料金です（すべて税込）。背景オプションを組み合わせてお見積り。個人・同人以外の商用利用は +50%。</p>
+    <div class="price-wrap">
+      <div class="price-main reveal">
+        <ul class="price-list">
+          <li><span class="price-name">SDキャラ・顔アップ<small class="price-sub">SNSアイコンなどに</small></span><span class="price-val">10,000円〜</span></li>
+          <li><span class="price-name">バストアップ<small class="price-sub">表紙などに</small></span><span class="price-val">15,000円〜</span></li>
+          <li><span class="price-name">全身<small class="price-sub">グッズなどに</small></span><span class="price-val">20,000円〜</span></li>
+          <li><span class="price-name">漫画（モノクロ）<small class="price-sub">背景や複数キャラ込み/1ページあたり</small></span><span class="price-val">8,000円〜</span></li>
+          <li><span class="price-name">漫画（カラー）<small class="price-sub">背景や複数キャラ込み/1ページあたり</small></span><span class="price-val">15,000円〜</span></li>
+        </ul>
+        <p class="price-note">※キャラ1体・背景なしが基準です。追加キャラは全身1体につき +15,000円。差分などは別途お見積り。</p>
+      </div>
+      <div class="price-side">
+        <div class="price-card reveal">
+          <h3>背景オプション</h3>
+          <ul class="opt-list">
+            <li><span>無地・単色・透過</span><span class="v">込み</span></li>
+            <li><span>パターン・簡単なモチーフ</span><span class="v">+3,000円</span></li>
+            <li><span>描き込み（室内・小物など）</span><span class="v">+10,000円</span></li>
+          </ul>
+        </div>
+        <div class="price-card reveal">
+          <h3>ご案内</h3>
+          <ul class="info-list">
+            <li><span class="k">商用利用</span>個人・同人以外は +50%</li>
+            <li><span class="k">お支払い</span>銀行振込・前払い</li>
+            <li><span class="k">納期</span>ご入金から2週間〜1ヶ月</li>
+            <li><span class="k">特急</span>1週間以内は +20%</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="flow-title reveal">ご依頼の流れ</h3>
+    <div class="steps">
+      <div class="step-row reveal"><span class="n"></span><span class="t">お問い合わせフォームにご記入</span></div>
+      <div class="step-row reveal"><span class="n"></span><span class="t">お打ち合わせ<small>テキストでやりとり</small></span></div>
+      <div class="step-row reveal"><span class="n"></span><span class="t">料金のお振込<small>前払い</small></span></div>
+      <div class="step-row reveal"><span class="n"></span><span class="t">ラフ提示<small>リテイク1回まで無料</small></span></div>
+      <div class="step-row reveal"><span class="n"></span><span class="t">線画＋仮着彩を提示<small>色変更1回まで無料</small></span></div>
+      <div class="step-row reveal"><span class="n"></span><span class="t">仕上げ・納品</span></div>
+    </div>
+
+    <div class="serve-cta reveal">
+      <a href="#contact" class="btn btn-pink">イラストのご依頼はこちら</a>
+    </div>
+  </div>
+</section>
+
 <!-- ===== お問い合わせ ===== -->
 <section id="contact">
   <div class="wrap contact-inner">
@@ -434,6 +516,7 @@
       <a href="#works">活動</a>
       <a href="#gallery">ギャラリー</a>
       <a href="#services">お仕事のご依頼</a>
+      <a href="#price">料金</a>
       <a href="https://x.com/choco_py3" target="_blank" rel="noopener">X</a>
     </div>
     <p class="copy">© <span id="year"></span> CHOCOLAB &nbsp; ALL RIGHTS RESERVED.</p>
